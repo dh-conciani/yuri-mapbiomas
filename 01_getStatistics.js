@@ -5,7 +5,7 @@
 // calculate area of @author João Siqueira
 
 // definir tamanho do buffer (em metros)
-var buffer_size = [100, 200, 500];
+var buffer_size = [500, 1000, 2000, 4000, 6000];
 
 // carregar pontos
 var sites = ee.FeatureCollection('users/dh-conciani/yuri/sites2');
@@ -44,7 +44,7 @@ buffer_size.forEach(function(size_i) {
   var scale = 30;
   
   // define the years to bem computed 
-  var years = ee.List.sequence({'start': 2020, 'end': 2021, 'step': 1}).getInfo();
+  var years = ee.List.sequence({'start': 1985, 'end': 2017, 'step': 1}).getInfo();
   
   // define a Google Drive output folder 
   var driverFolder = 'YURI-EXPORT';
